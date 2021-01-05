@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE COIN</title>
+    <link rel="icon" href="../project/img/coins.svg" type="image/icon type">
+    <!-- link item  -->
+
+    <!-- Primary Meta Tags -->
+<title>Your Myanmar Currency Exchanger</title>
+<meta name="title" content="Your Myanmar Currency Exchanger">
+<meta name="description" content="Project For SWD  7 MMSIT">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mms-it.com/">
+<meta property="og:title" content="Your Myanmar Currency Exchanger">
+<meta property="og:description" content="Project For SWD  7 MMSIT">
+<meta property="og:image" content="project/img/coin.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://mms-it.com/">
+<meta property="twitter:title" content="Your Myanmar Currency Exchanger">
+<meta property="twitter:description" content="Project For SWD  7 MMSIT">
+<meta property="twitter:image" content="project/img/coin.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/fontawsome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+   <section class="app">  <!-- app section start-->
+    
+    <!-- out put start here  --> 
+    <div class="header"> . ငွေစျေးများသည် မြန်မာနိုင်ငံတော်ဗဟိုဘဏ်၏ တရားဝင်ပေါက်စျေးများဖြစ်သည်။ 
+        <img src="../project/img/cbm.png" alt="">
+    </div>
+    
+    <div class="output">
+        <div class="brand-container">
+            <img src="img/coins.svg" class="logo" alt="">
+            <p class="brand">THE COIN</p>
+        </div>
+        <div class="result-container">
+            <p class="result" id="result">0.00</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+
+    <!-- out put end here  -->
+
+    <!--  Start Input section-->
+
+    <form class="calc" id="calc">
+        <div class="input-container container">
+            <label>Input</label>
+            <input type="number" class="input" id="input" placeholder="0.00" min="1" autofocus required>
+        </div>
+        <div class="from-container container">
+            <label>From</label>
+            <select id="from" class="from"  required>
+                <option value="" selected>Select Currency</option>
+            </select>
+        </div>
+        <div class="to-container container">
+            <label>To</label>
+            <select id="to" class="to" required>
+
+            </select>
+        </div>
+        <div class="calculate-container container">
+            <button class="calc-btn" id="calcBtn" onclick="alertFun()">Calculate</button>
+        </div>
+    </form>
+
+    <div class="history-container">
+        <table class="history" onchange="text">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="historyList">
+                
+            </tbody>
+        </table>
+    </div>
+
+  </section>   <!-- app section end-->
+
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

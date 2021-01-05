@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@700&display=swap');
+
+
+
+:root{
+    --primary:#00bc6e;
+    --secondary:#006b36;
+    --light:#fff;
+    --dark:#000;
+    --br:5px;
+}
+
+
+@font-face{
+        font-family: "mm";
+        font-weight: normal;
+        src: url(../fonts/Pyidaungsu-2.5.3_Regular.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sarala', sans-serif;
+    
+}
+.header{
+    font-family: mm;
+    font-size: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    color: var(--secondary);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header img{
+    width: 100px;
+}
+.divider{
+    margin-top: 5px;
+    background:var(--primary) ;
+    height: 3px;
+    border-radius:var(--br);
+}
+
+
+.app{
+    width: 600px;
+    margin: 100px auto;
+}
+
+.output{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px 10px;
+}
+
+.brand-container{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+}
+
+.brand {
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 'Jockey One', sans-serif;
+    color: var(--light);
+}
+
+.result-container{
+        display: flex;
+        align-items: center;
+}
+
+.result{
+    font-size: 30px;
+    font-family: 'Ramabhadra', sans-serif;
+    color: var(--light);
+    font-weight: bolder;
+    
+}
+.calc{
+    justify-content: space-between;
+    display: flex;
+    margin-top: 10px;
+    color: var(--secondary);
+}
+.container{
+    width: 150px;
+
+}
+.input,.from,.to{
+    width: 90%;
+    padding: 5px;
+    border-radius: var(--br);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+.input{
+    text-align: right;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--secondary);
+    opacity: 0.8; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:var(--secondary);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--secondary);
+  }
+
+.container label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.calc-btn{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--br);
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid var(--primary);
+    color: var(--light);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.calc-btn:active{
+    
+    background: #00b09b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+/* to hide number arrow  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* to hide drop down arrow  */
+select::-ms-expand {	display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+   select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+select:focus,input:focus,button:focus{
+    outline: none;
+}
+
+.history {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .history td, .history th {
+    
+    padding: 8px;
+    border-radius: var(--secondary);
+  }
+  
+  .history tr:nth-child(even){background-color: #e8fff6;}
+  
+  .history tr:hover {background-color: rgb(248, 248, 248);}
+  .history tr{
+      background-color: #e8fff6 ;
+  }
+  .history th {
+    
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color:var(--light);
+  }
+  .histpry th:last-child{
+      text-align: right;
+  }
+  .history tr td:last-child{
+      text-align: right;
+  }
+  #rowSpacer td{
+      text-align: center !important;
+  }
+
+  /* for responsive  */
+
+  @media screen and (max-width :480px){
+      .app{
+          width: 96%;
+          margin:30px auto;
+      }
+      .output{
+        flex-flow: column;
+        align-items:flex-end;
+      }
+      .brand-container{
+        width: 100%;
+      }
+      .result-container{
+        
+      }
+      .calc{
+          flex-wrap: wrap;
+      }
+      .container{
+          width: 100%;
+         margin-bottom: 20px;
+
+      }
+      #from{
+        width: 100%;
+      }
+      #to{
+        width: 100%;
+
+      }
+      .input,.from,.to{
+          width: 100%;
+          padding: 15px 10px;
+      }
+      .from-container,.to-container{
+         width: 48%;
+      }
+      .calc-btn{
+          padding: 15px;
+      }
+      .header{
+          margin: 10px 10px;
+      }
+     
+  }
